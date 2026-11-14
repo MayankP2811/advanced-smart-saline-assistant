@@ -1,0 +1,4 @@
+-r requirements.txt
+# Install on a compatible Raspberry Pi OS host only.
+RPi.GPIO
+spidev

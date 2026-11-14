@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block title %}Register patient{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-12 col-xl-10">
+    <h2 class="h3 my-4 page-title">Patient registration</h2>
+
+    <form id="regForm" action="{{ url_for('submit_data') }}" method="post">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <input type="hidden" name="security_code" class="security-code-field">
+      <hr class="my-4">
+      <h5 class="mb-4">Personal details</h5>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="fname">First name</label>
+          <input type="text" id="fname" name="fname" class="form-control" maxlength="80" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="lname">Last name</label>
+          <input type="text" id="lname" name="lname" class="form-control" maxlength="80" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="fcno">Family contact number</label>
+          <input type="tel" id="fcno" name="fcno" class="form-control" maxlength="20" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="phone">Patient contact number</label>
+          <input type="tel" id="phone" name="phone" class="form-control" maxlength="20" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="dob">Date of birth</label>
+          <input type="date" id="dob" name="dob" class="form-control" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" class="form-control" required>
+            <option value="" selected disabled hidden>Select an option</option>
+            {% for g in genders %}<option value="{{ g }}">{{ g }}</option>{% endfor %}
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" class="form-control" min="0" max="130" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" name="height" class="form-control" min="1" max="300" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" name="weight" class="form-control" min="1" max="500" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="blood">Blood group</label>
+          <select id="blood" name="blood" class="form-control" required>
+            <option value="" selected disabled hidden>Select an option</option>
+            {% for b in blood_groups %}<option value="{{ b }}">{{ b }}</option>{% endfor %}
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="handler">Handling doctor</label>
+          <input type="text" id="handler" name="handler" class="form-control" maxlength="80" required>
+        </div>
+      </div>
+
+      <div class="text-right mb-4">
+        <button type="button" class="btn btn-primary" onclick="openSecurityCheck('regForm')">Save patient</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% include 'security_modal.html' %}
+{% endblock %}

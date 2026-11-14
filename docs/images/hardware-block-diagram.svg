@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="460" viewBox="0 0 1000 460" role="img" aria-labelledby="t d">
+<title id="t">Hardware block diagram</title>
+<desc id="d">Patient side: a load cell, an IR sensor, a MAX30102 pulse sensor and an MLX90614 temperature sensor feed an Arduino Uno, which has its own power supply, drives a servo motor and a buzzer, and sends data through an NRF transceiver. Over 2.4 GHz radio, a second NRF transceiver passes the data to a Raspberry Pi with its own power supply, a buzzer and a display.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#3e5872"/></marker></defs>
+<rect width="1000" height="460" rx="14" fill="#fff"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<line x1="575" y1="25" x2="575" y2="440" stroke="#d9e3ec" stroke-width="1.5"/>
+<text x="250" y="40" font-size="17" font-weight="700" fill="#17334e" text-anchor="middle">Patient side (bedside unit)</text>
+<text x="790" y="40" font-size="17" font-weight="700" fill="#17334e" text-anchor="middle">Nurse side (central station)</text>
+<rect x="20" y="90" width="150" height="50" rx="10" fill="#eaf4ec" stroke="#9cc8a6" stroke-width="1.5"/>
+<text x="95.0" y="121.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">Load cell</text>
+<rect x="20" y="160" width="150" height="50" rx="10" fill="#eaf4ec" stroke="#9cc8a6" stroke-width="1.5"/>
+<text x="95.0" y="191.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">IR sensor</text>
+<rect x="20" y="230" width="150" height="50" rx="10" fill="#eaf4ec" stroke="#9cc8a6" stroke-width="1.5"/>
+<text x="95.0" y="251.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">Pulse sensor</text>
+<text x="95.0" y="271.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">MAX30102</text>
+<rect x="20" y="300" width="150" height="50" rx="10" fill="#eaf4ec" stroke="#9cc8a6" stroke-width="1.5"/>
+<text x="95.0" y="321.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">Temp sensor</text>
+<text x="95.0" y="341.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">MLX90614</text>
+<rect x="220" y="140" width="140" height="170" rx="10" fill="#e3eefb" stroke="#8fb3e0" stroke-width="1.5"/>
+<text x="290.0" y="221.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">Arduino</text>
+<text x="290.0" y="241.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">Uno</text>
+<rect x="225" y="60" width="130" height="50" rx="10" fill="#f1f1f1" stroke="#b9b9b9" stroke-width="1.5"/>
+<text x="290.0" y="91.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">Power supply</text>
+<rect x="225" y="350" width="130" height="50" rx="10" fill="#fdf1e4" stroke="#e3b77f" stroke-width="1.5"/>
+<text x="290.0" y="381.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">Servo motor</text>
+<rect x="400" y="140" width="130" height="50" rx="10" fill="#fbe9e9" stroke="#df9c9c" stroke-width="1.5"/>
+<text x="465.0" y="161.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">NRF</text>
+<text x="465.0" y="181.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">transceiver</text>
+<rect x="400" y="260" width="130" height="50" rx="10" fill="#fdf1e4" stroke="#e3b77f" stroke-width="1.5"/>
+<text x="465.0" y="291.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">Buzzer</text>
+<path d="M170 115H195V150H218" fill="none" stroke="#3e5872" stroke-width="2" marker-end="url(#a)"/>
+<path d="M170 185H218" fill="none" stroke="#3e5872" stroke-width="2" marker-end="url(#a)"/>
+<path d="M170 255H218" fill="none" stroke="#3e5872" stroke-width="2" marker-end="url(#a)"/>
+<path d="M170 325H195V300H218" fill="none" stroke="#3e5872" stroke-width="2" marker-end="url(#a)"/>
+<path d="M290 110V138" fill="none" stroke="#3e5872" stroke-width="2" marker-end="url(#a)"/>
+<path d="M290 310V348" fill="none" stroke="#3e5872" stroke-width="2" marker-end="url(#a)"/>
+<path d="M360 165H398" fill="none" stroke="#3e5872" stroke-width="2" marker-end="url(#a)"/>
+<path d="M360 285H398" fill="none" stroke="#3e5872" stroke-width="2" marker-end="url(#a)"/>
+<path d="M545 165H600" stroke="#3e5872" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#a)" fill="none"/>
+<text x="572" y="150" font-size="13" fill="#486178" text-anchor="middle">2.4 GHz</text>
+<rect x="610" y="140" width="130" height="50" rx="10" fill="#fbe9e9" stroke="#df9c9c" stroke-width="1.5"/>
+<text x="675.0" y="161.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">NRF</text>
+<text x="675.0" y="181.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">transceiver</text>
+<rect x="770" y="120" width="150" height="90" rx="10" fill="#e3eefb" stroke="#8fb3e0" stroke-width="1.5"/>
+<text x="845.0" y="171.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">Raspberry Pi</text>
+<rect x="780" y="60" width="130" height="40" rx="10" fill="#f1f1f1" stroke="#b9b9b9" stroke-width="1.5"/>
+<text x="845.0" y="86.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">Power supply</text>
+<rect x="780" y="260" width="130" height="50" rx="10" fill="#fdf1e4" stroke="#e3b77f" stroke-width="1.5"/>
+<text x="845.0" y="291.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">Buzzer</text>
+<rect x="770" y="350" width="150" height="50" rx="10" fill="#fdf1e4" stroke="#e3b77f" stroke-width="1.5"/>
+<text x="845.0" y="381.0" font-size="16" font-weight="700" fill="#17334e" text-anchor="middle">Display</text>
+<path d="M740 165H768" fill="none" stroke="#3e5872" stroke-width="2" marker-end="url(#a)"/>
+<path d="M845 100V118" fill="none" stroke="#3e5872" stroke-width="2" marker-end="url(#a)"/>
+<path d="M845 210V258" fill="none" stroke="#3e5872" stroke-width="2" marker-end="url(#a)"/>
+<path d="M920 165H960V375H922" fill="none" stroke="#3e5872" stroke-width="2" marker-end="url(#a)"/>
+<text x="500" y="445" font-size="13" fill="#536a7e" text-anchor="middle">Based on Figure 2 of the team's technical paper, with the temperature sensor added.</text>
+</g></svg>

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}Active patients{% endblock %}
+
+{% block search %}
+<form class="form-inline mr-auto searchform text-muted" onsubmit="return false">
+  <input id="searchInput" class="form-control mr-sm-2 bg-transparent border-0 pl-4 text-muted"
+         type="search" placeholder="Search patients..." aria-label="Search patients" oninput="filterPatients()">
+</form>
+{% endblock %}
+
+{% block content %}
+<div class="row align-items-center my-4">
+  <div class="col">
+    <h2 class="h3 mb-0 page-title">Active patients</h2>
+  </div>
+  <div class="col-auto">
+    <a href="{{ url_for('reg') }}" class="btn btn-primary"><span class="fe fe-user-plus fe-16 mr-2"></span>Add new patient</a>
+  </div>
+</div>
+
+<div class="row" id="patientList">
+  {% for patient, therapy in rows %}
+  <div class="col-md-3">
+    <div class="card shadow mb-4" data-channel="{{ therapy.channel }}">
+      <a class="text-reset text-decoration-none" href="{{ url_for('show_patient', id=patient.RegID) }}">
+        <div class="card-body text-center">
+          <div class="avatar avatar-lg mt-4">
+            <img src="/static/assets/avatars/{{ 'male' if patient.gender == 'Male' else 'female' }}.png" alt="" class="avatar-img rounded-circle">
+          </div>
+          <div class="card-text my-2">
+            <strong class="card-title my-0">{{ patient.fname }} {{ patient.lname }}</strong>
+            <p class="small text-muted mb-2">{{ patient.gender }} · Channel {{ therapy.channel }}</p>
+            <p class="mb-0">Bottle: <span class="data-b">—</span></p>
+            <p class="mb-0">Rate: <span class="data-c">—</span></p>
+            <p class="mb-0">Count: <span class="data-d">—</span></p>
+            <p class="mb-0">Heart rate: <span class="data-e">—</span> bpm</p>
+            <p class="mb-0">Temperature: <span class="data-f">—</span> °C</p>
+            <p class="small text-muted mt-2 mb-0">Live from bedside node <span class="data-z">{{ therapy.channel }}</span></p>
+          </div>
+        </div>
+      </a>
+      <div class="card-footer">
+        <small><span class="dot dot-lg bg-success mr-1"></span> Active</small>
+      </div>
+      <div class="card-footer1 alert-danger" role="alert">No fresh readings from this node</div>
+      <div class="card-footer2 alert-warning" role="alert">Bottle reading outside the expected range</div>
+      <div class="card-footer3 alert-warning" role="alert" style="display:none">Check vitals: <span class="vitals-msg"></span></div>
+    </div>
+  </div>
+  {% else %}
+  <div class="col-12"><p class="text-muted">No active therapies. Open a patient to start one.</p></div>
+  {% endfor %}
+</div>
+{% endblock %}
