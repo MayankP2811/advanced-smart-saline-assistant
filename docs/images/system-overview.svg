@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+<title id="title">Smart Saline: how it works</title>
+<desc id="desc">Each bedside unit has an IR drop sensor, a load cell and a pulse sensor connected to an Arduino Uno, which also drives a servo that squeezes the IV tube and an OLED display with a buzzer. The Arduino talks over NRF24L01 2.4 GHz radio, without internet, to a Raspberry Pi at the nurses' desk. The Pi runs a Flask web app backed by MySQL, and doctors and nurses use the web dashboard to monitor patients and send Start, Stop and rate commands back to the bed.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3e5872"/></marker></defs>
+<rect width="1200" height="640" rx="18" fill="#ffffff"/>
+<path d="M18 0H1182Q1200 0 1200 18V90H0V18Q0 0 18 0Z" fill="#132c45"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="36" y="46" font-size="30" fill="#fff" font-weight="700">Smart Saline · how it works</text>
+<text x="36" y="76" font-size="17" fill="#c9dce9">Bedside units measure the drip and send readings by radio to a central Raspberry Pi; clinicians watch and control them from a web dashboard.</text>
+<rect x="20" y="110" width="555" height="470" rx="14" fill="#f3f7fb" stroke="#d9e3ec" stroke-width="1.5"/>
+<text x="42" y="142" font-size="15" fill="#17334e" font-weight="700" text-anchor="start">BEDSIDE UNIT  ·  one per bed, up to 3</text>
+<rect x="605" y="110" width="575" height="470" rx="14" fill="#f2f9f6" stroke="#d3e6dd" stroke-width="1.5"/>
+<text x="627" y="142" font-size="15" fill="#17334e" font-weight="700" text-anchor="start">CENTRAL STATION  ·  nurses' desk</text>
+<rect x="45" y="170" width="210" height="75" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<text x="150.0" y="202.5" font-size="18" font-weight="700" fill="#17334e" text-anchor="middle">IR drop sensor</text>
+<text x="150.0" y="226.5" font-size="15" fill="#486178" text-anchor="middle">counts each drop</text>
+<rect x="45" y="265" width="210" height="75" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<text x="150.0" y="297.5" font-size="18" font-weight="700" fill="#17334e" text-anchor="middle">Load cell</text>
+<text x="150.0" y="321.5" font-size="15" fill="#486178" text-anchor="middle">weighs the bottle</text>
+<rect x="45" y="360" width="210" height="75" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<text x="150.0" y="392.5" font-size="18" font-weight="700" fill="#17334e" text-anchor="middle">Vital-sign sensors</text>
+<text x="150.0" y="416.5" font-size="15" fill="#486178" text-anchor="middle">heart rate, body temp</text>
+<path d="M255 207H285V262H318" fill="none" stroke="#3e5872" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M255 302H318" fill="none" stroke="#3e5872" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M255 397H285V330H318" fill="none" stroke="#3e5872" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="320" y="235" width="220" height="120" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<text x="430.0" y="290.0" font-size="18" font-weight="700" fill="#17334e" text-anchor="middle">Arduino Uno</text>
+<text x="430.0" y="314.0" font-size="15" fill="#486178" text-anchor="middle">reads sensors, runs servo</text>
+<rect x="45" y="470" width="210" height="80" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<text x="150.0" y="505.0" font-size="18" font-weight="700" fill="#17334e" text-anchor="middle">OLED + buzzer</text>
+<text x="150.0" y="529.0" font-size="15" fill="#486178" text-anchor="middle">bedside display, alerts</text>
+<rect x="320" y="470" width="220" height="80" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<text x="430.0" y="505.0" font-size="18" font-weight="700" fill="#17334e" text-anchor="middle">Servo squeezer</text>
+<text x="430.0" y="529.0" font-size="15" fill="#486178" text-anchor="middle">presses the IV tube</text>
+<path d="M430 355V468" fill="none" stroke="#3e5872" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M350 355V452H150V468" fill="none" stroke="#3e5872" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M540 295H623" fill="none" stroke="#3e5872" stroke-width="2.2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<rect x="545.2" y="254" width="73.60000000000001" height="22" rx="4" fill="#fff"/>
+<text x="582" y="268" font-size="14" fill="#17334e" font-weight="700" text-anchor="middle">NRF24L01</text>
+<rect x="529.525" y="317" width="104.95" height="21" rx="4" fill="#fff"/>
+<text x="582" y="330" font-size="13" fill="#486178" font-weight="400" text-anchor="middle">2.4 GHz radio</text>
+<rect x="536.675" y="335" width="90.65" height="21" rx="4" fill="#fff"/>
+<text x="582" y="348" font-size="13" fill="#486178" font-weight="400" text-anchor="middle">no internet</text>
+<rect x="625" y="235" width="150" height="120" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<text x="700.0" y="290.0" font-size="18" font-weight="700" fill="#17334e" text-anchor="middle">Raspberry Pi</text>
+<text x="700.0" y="314.0" font-size="15" fill="#486178" text-anchor="middle">radio receiver</text>
+<rect x="815" y="235" width="160" height="120" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<text x="895.0" y="290.0" font-size="18" font-weight="700" fill="#17334e" text-anchor="middle">Flask web app</text>
+<text x="895.0" y="314.0" font-size="15" fill="#486178" text-anchor="middle">runs on the Pi</text>
+<rect x="1015" y="235" width="145" height="120" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<text x="1087.5" y="290.0" font-size="18" font-weight="700" fill="#17334e" text-anchor="middle">MySQL</text>
+<text x="1087.5" y="314.0" font-size="15" fill="#486178" text-anchor="middle">patient records</text>
+<rect x="815" y="450" width="160" height="100" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<text x="895.0" y="495.0" font-size="18" font-weight="700" fill="#17334e" text-anchor="middle">Web dashboard</text>
+<text x="895.0" y="519.0" font-size="15" fill="#486178" text-anchor="middle">doctors, nurses</text>
+<path d="M775 295H813" fill="none" stroke="#3e5872" stroke-width="2.2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<path d="M975 295H1013" fill="none" stroke="#3e5872" stroke-width="2.2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<path d="M895 355V448" fill="none" stroke="#3e5872" stroke-width="2.2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<rect x="508.075" y="201" width="147.85000000000002" height="21" rx="4" fill="#fff"/>
+<text x="582" y="214" font-size="13" fill="#486178" font-weight="400" text-anchor="middle">readings ⇄ commands</text>
+<text x="36" y="616" font-size="15" fill="#536a7e">This repository contains the web app, the Raspberry Pi radio code and the Arduino vital-signs and radio sketch. Load-cell, drop-counting and servo firmware is not included.</text>
+</g></svg>

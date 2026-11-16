@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="t d">
+<title id="t">Ward architecture</title>
+<desc id="d">Up to four bedside units in a ward, each with a load cell, IR drop sensor, servo squeezer, Arduino and OLED display, talk over offline NRF24L01 radio to a central station: a Raspberry Pi main receiver running the Flask web app. The data goes to a MySQL database, a Raspberry Pi touch display at the nurses' station, and a web portal on PCs or phones on the ward network. Staff respond to dashboard alerts: the doctor gives input, an admin allocates staff, and a nurse attends the bed or the rate is changed remotely.</desc>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3e5872"/></marker>
+<marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#a35c16"/></marker>
+</defs>
+<rect width="1200" height="720" rx="18" fill="#fff"/>
+<path d="M18 0H1182Q1200 0 1200 18V90H0V18Q0 0 18 0Z" fill="#132c45"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="36" y="46" font-size="30" fill="#fff" font-weight="700">Smart Saline · ward architecture</text>
+<text x="36" y="76" font-size="17" fill="#c9dce9">Bedside units report drip and vital signs to one central station over offline radio. Staff act on the alerts.</text>
+<rect x="20" y="110" width="430" height="380" rx="14" fill="#f3f7fb" stroke="#d9e3ec" stroke-width="1.5"/>
+<text x="40" y="140" font-size="14" fill="#17334e" text-anchor="start" font-weight="700">WARD  ·  one bedside unit per bed</text>
+<rect x="45" y="152" width="180" height="152" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<rect x="63" y="170" width="26" height="44" rx="7" fill="none" stroke="#5fa4e8" stroke-width="2"/>
+<rect x="65" y="188" width="22" height="24" rx="5" fill="#5fa4e8" opacity=".55"/>
+<rect x="62" y="220" width="28" height="16" rx="4" fill="#e07a3f"/>
+<rect x="62" y="244" width="28" height="16" rx="4" fill="#e07a3f"/>
+<text x="107" y="190" font-size="18" fill="#17334e" text-anchor="start" font-weight="700">Unit 1</text>
+<text x="107" y="212" font-size="13" fill="#486178" text-anchor="start" font-weight="400">load cell</text>
+<text x="107" y="230" font-size="13" fill="#486178" text-anchor="start" font-weight="400">IR drop sensor</text>
+<text x="107" y="248" font-size="13" fill="#486178" text-anchor="start" font-weight="400">servo squeezer</text>
+<text x="107" y="266" font-size="13" fill="#c0392b" text-anchor="start" font-weight="700">heart rate + temp</text>
+<text x="107" y="284" font-size="13" fill="#486178" text-anchor="start" font-weight="400">Arduino + OLED</text>
+<rect x="245" y="152" width="180" height="152" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<rect x="263" y="170" width="26" height="44" rx="7" fill="none" stroke="#5fa4e8" stroke-width="2"/>
+<rect x="265" y="188" width="22" height="24" rx="5" fill="#5fa4e8" opacity=".55"/>
+<rect x="262" y="220" width="28" height="16" rx="4" fill="#e07a3f"/>
+<rect x="262" y="244" width="28" height="16" rx="4" fill="#e07a3f"/>
+<text x="307" y="190" font-size="18" fill="#17334e" text-anchor="start" font-weight="700">Unit 2</text>
+<text x="307" y="212" font-size="13" fill="#486178" text-anchor="start" font-weight="400">load cell</text>
+<text x="307" y="230" font-size="13" fill="#486178" text-anchor="start" font-weight="400">IR drop sensor</text>
+<text x="307" y="248" font-size="13" fill="#486178" text-anchor="start" font-weight="400">servo squeezer</text>
+<text x="307" y="266" font-size="13" fill="#c0392b" text-anchor="start" font-weight="700">heart rate + temp</text>
+<text x="307" y="284" font-size="13" fill="#486178" text-anchor="start" font-weight="400">Arduino + OLED</text>
+<rect x="45" y="318" width="180" height="152" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<rect x="63" y="336" width="26" height="44" rx="7" fill="none" stroke="#5fa4e8" stroke-width="2"/>
+<rect x="65" y="354" width="22" height="24" rx="5" fill="#5fa4e8" opacity=".55"/>
+<rect x="62" y="386" width="28" height="16" rx="4" fill="#e07a3f"/>
+<rect x="62" y="410" width="28" height="16" rx="4" fill="#e07a3f"/>
+<text x="107" y="356" font-size="18" fill="#17334e" text-anchor="start" font-weight="700">Unit 3</text>
+<text x="107" y="378" font-size="13" fill="#486178" text-anchor="start" font-weight="400">load cell</text>
+<text x="107" y="396" font-size="13" fill="#486178" text-anchor="start" font-weight="400">IR drop sensor</text>
+<text x="107" y="414" font-size="13" fill="#486178" text-anchor="start" font-weight="400">servo squeezer</text>
+<text x="107" y="432" font-size="13" fill="#c0392b" text-anchor="start" font-weight="700">heart rate + temp</text>
+<text x="107" y="450" font-size="13" fill="#486178" text-anchor="start" font-weight="400">Arduino + OLED</text>
+<rect x="245" y="318" width="180" height="152" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<rect x="263" y="336" width="26" height="44" rx="7" fill="none" stroke="#5fa4e8" stroke-width="2"/>
+<rect x="265" y="354" width="22" height="24" rx="5" fill="#5fa4e8" opacity=".55"/>
+<rect x="262" y="386" width="28" height="16" rx="4" fill="#e07a3f"/>
+<rect x="262" y="410" width="28" height="16" rx="4" fill="#e07a3f"/>
+<text x="307" y="356" font-size="18" fill="#17334e" text-anchor="start" font-weight="700">Unit 4</text>
+<text x="307" y="378" font-size="13" fill="#486178" text-anchor="start" font-weight="400">load cell</text>
+<text x="307" y="396" font-size="13" fill="#486178" text-anchor="start" font-weight="400">IR drop sensor</text>
+<text x="307" y="414" font-size="13" fill="#486178" text-anchor="start" font-weight="400">servo squeezer</text>
+<text x="307" y="432" font-size="13" fill="#c0392b" text-anchor="start" font-weight="700">heart rate + temp</text>
+<text x="307" y="450" font-size="13" fill="#486178" text-anchor="start" font-weight="400">Arduino + OLED</text>
+<path d="M452 300H538" fill="none" stroke="#3e5872" stroke-width="2.2" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="495" y="282" font-size="13" fill="#17334e" text-anchor="middle" font-weight="700">NRF24L01</text>
+<text x="495" y="322" font-size="12" fill="#486178" text-anchor="middle" font-weight="400">2.4 GHz</text>
+<text x="495" y="338" font-size="12" fill="#486178" text-anchor="middle" font-weight="400">offline</text>
+<rect x="540" y="110" width="300" height="380" rx="14" fill="#f2f9f6" stroke="#d3e6dd" stroke-width="1.5"/>
+<text x="560" y="140" font-size="14" fill="#17334e" text-anchor="start" font-weight="700">CENTRAL STATION</text>
+<rect x="565" y="160" width="250" height="90" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<text x="690.0" y="201.0" font-size="18" font-weight="700" fill="#17334e" text-anchor="middle">Main receiver</text>
+<text x="690.0" y="224.0" font-size="14" fill="#486178" text-anchor="middle">Raspberry Pi + NRF24L01</text>
+<rect x="565" y="300" width="250" height="90" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<text x="690.0" y="341.0" font-size="18" font-weight="700" fill="#17334e" text-anchor="middle">Flask web app</text>
+<text x="690.0" y="364.0" font-size="14" fill="#486178" text-anchor="middle">logins, patients, therapies</text>
+<path d="M690 250V298" fill="none" stroke="#3e5872" stroke-width="2.2" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="690" y="430" font-size="13" fill="#486178" text-anchor="middle" font-weight="400">readings in, commands out</text>
+<text x="690" y="450" font-size="13" fill="#486178" text-anchor="middle" font-weight="400">for every unit</text>
+<rect x="870" y="110" width="310" height="380" rx="14" fill="#f6f4fb" stroke="#e0dbef" stroke-width="1.5"/>
+<text x="890" y="140" font-size="14" fill="#17334e" text-anchor="start" font-weight="700">WHO SEES THE DATA</text>
+<rect x="895" y="160" width="260" height="80" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<text x="1025.0" y="196.0" font-size="18" font-weight="700" fill="#17334e" text-anchor="middle">MySQL database</text>
+<text x="1025.0" y="219.0" font-size="14" fill="#486178" text-anchor="middle">patient + therapy records</text>
+<rect x="895" y="265" width="260" height="80" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<text x="1025.0" y="301.0" font-size="18" font-weight="700" fill="#17334e" text-anchor="middle">RPi touch display</text>
+<text x="1025.0" y="324.0" font-size="14" fill="#486178" text-anchor="middle">nurses' station</text>
+<rect x="895" y="370" width="260" height="80" rx="12" fill="#fff" stroke="#cbd8e4" stroke-width="1.5"/>
+<text x="1025.0" y="406.0" font-size="18" font-weight="700" fill="#17334e" text-anchor="middle">Web portal</text>
+<text x="1025.0" y="429.0" font-size="14" fill="#486178" text-anchor="middle">PC or phone on the ward network</text>
+<path d="M815 345H850V200H893" fill="none" stroke="#3e5872" stroke-width="2.2" marker-end="url(#a)"/>
+<path d="M850 305H893" fill="none" stroke="#3e5872" stroke-width="2.2" marker-end="url(#a)"/>
+<path d="M850 345V410H893" fill="none" stroke="#3e5872" stroke-width="2.2" marker-end="url(#a)"/>
+<rect x="20" y="515" width="1160" height="150" rx="14" fill="#fffaf3" stroke="#eedcc2" stroke-width="1.5"/>
+<text x="40" y="545" font-size="14" fill="#17334e" text-anchor="start" font-weight="700">HOW STAFF USE IT</text>
+<rect x="60" y="565" width="240" height="72" rx="12" fill="#fff" stroke="#e4c69e" stroke-width="1.5"/>
+<text x="180.0" y="597.0" font-size="17" font-weight="700" fill="#17334e" text-anchor="middle">Alert on the dashboard</text>
+<text x="180.0" y="620.0" font-size="14" fill="#486178" text-anchor="middle">fever, heart rate, bottle low</text>
+<path d="M300 601H343" fill="none" stroke="#a35c16" stroke-width="2.2" marker-end="url(#b)"/>
+<rect x="345" y="565" width="240" height="72" rx="12" fill="#fff" stroke="#e4c69e" stroke-width="1.5"/>
+<text x="465.0" y="597.0" font-size="17" font-weight="700" fill="#17334e" text-anchor="middle">Doctor's input</text>
+<text x="465.0" y="620.0" font-size="14" fill="#486178" text-anchor="middle">therapy, drop rate</text>
+<path d="M585 601H628" fill="none" stroke="#a35c16" stroke-width="2.2" marker-end="url(#b)"/>
+<rect x="630" y="565" width="240" height="72" rx="12" fill="#fff" stroke="#e4c69e" stroke-width="1.5"/>
+<text x="750.0" y="597.0" font-size="17" font-weight="700" fill="#17334e" text-anchor="middle">Admin allocates staff</text>
+<text x="750.0" y="620.0" font-size="14" fill="#486178" text-anchor="middle">who goes to which bed</text>
+<path d="M870 601H913" fill="none" stroke="#a35c16" stroke-width="2.2" marker-end="url(#b)"/>
+<rect x="915" y="565" width="240" height="72" rx="12" fill="#fff" stroke="#e4c69e" stroke-width="1.5"/>
+<text x="1035.0" y="597.0" font-size="17" font-weight="700" fill="#17334e" text-anchor="middle">Nurse attends the bed</text>
+<text x="1035.0" y="620.0" font-size="14" fill="#486178" text-anchor="middle">or the rate is changed remotely</text>
+<text x="36" y="700" font-size="14" fill="#536a7e">Based on the team's design (four units per station). The software in this repository supports three bedside nodes.</text>
+</g></svg>
