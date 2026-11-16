@@ -1,0 +1,13 @@
+.hide {
+display: none;
+}
+
+.show {
+display: block; /* or any other display property as needed */
+}
+
+.card-footer1, .card-footer2, .card-footer3 {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.85rem;
+  border-radius: 0 0 0.25rem 0.25rem;
+}

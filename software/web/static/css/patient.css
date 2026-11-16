@@ -1,0 +1,15 @@
+/* Patient page */
+.reading {
+  font-size: 20px;
+  margin-bottom: 0.25rem;
+}
+
+#sparkline polyline {
+  fill: none;
+  stroke: #1b68ff;
+  stroke-width: 2;
+}
+
+.table thead th {
+  color: #343a40;
+}

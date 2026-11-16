@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Log in · Smart Saline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/feather.css">
+  <link rel="stylesheet" href="/static/css/app-light.css">
+</head>
+<body class="light">
+  <div class="wrapper vh-100">
+    <div class="row align-items-center h-100">
+      <form class="col-lg-3 col-md-4 col-10 mx-auto text-center" action="{{ url_for('login') }}" method="post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+        <div class="navbar-brand mx-auto mt-2 flex-fill text-center">{% include 'logo.svg' %}</div>
+        <h1 class="h5 mb-1">Smart Saline</h1>
+        <p class="text-muted mb-4">Clinician sign in</p>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }}" role="alert">{{ message }}</div>
+          {% endfor %}
+        {% endwith %}
+        <div class="form-group">
+          <label for="email" class="sr-only">Email address</label>
+          <input type="email" id="email" name="email" class="form-control form-control-lg" placeholder="Email address" required autofocus>
+        </div>
+        <div class="form-group">
+          <label for="upass" class="sr-only">Password</label>
+          <input type="password" id="upass" name="upass" class="form-control form-control-lg" placeholder="Password" required>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
