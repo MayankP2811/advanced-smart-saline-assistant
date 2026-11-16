@@ -1,0 +1,11 @@
+# Third-party files: leave them out of GitHub's language statistics
+software/web/static/css/app-light.css linguist-vendored
+software/web/static/css/app-dark.css linguist-vendored
+software/web/static/css/feather.css linguist-vendored
+software/web/static/css/simplebar.css linguist-vendored
+software/web/static/js/*.min.js linguist-vendored
+software/web/static/js/apps.js linguist-vendored
+software/web/static/js/config.js linguist-vendored
+software/web/static/js/jquery.stickOnScroll.js linguist-vendored
+software/web/static/js/tinycolor-min.js linguist-vendored
+software/web/lib_nrf24.py linguist-vendored
